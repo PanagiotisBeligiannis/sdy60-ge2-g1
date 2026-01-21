@@ -1,0 +1,112 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:padding="16dp">
+
+    <!-- Logo -->
+    <TextView
+        android:id="@+id/txtHydro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HYDRO STORE"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Water Drop -->
+    <ImageView
+        android:id="@+id/imgWaterDrop"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/water_drop"
+        app:layout_constraintTop_toBottomOf="@id/txtHydro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Top row buttons -->
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/im11"
+        android:background="@drawable/button_circle"
+        app:layout_constraintTop_toBottomOf="@id/imgWaterDrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnSensors"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_margin="8dp"/>
+
+    <ImageButton
+        android:id="@+id/btnSensors"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/im12"
+        android:background="@drawable/button_circle"
+        app:layout_constraintTop_toBottomOf="@id/imgWaterDrop"
+        app:layout_constraintStart_toEndOf="@id/btnSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_margin="8dp"/>
+
+    <!-- Bottom row buttons -->
+    <ImageButton
+        android:id="@+id/btnForYou"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/im21"
+        android:background="@drawable/button_circle"
+        app:layout_constraintTop_toBottomOf="@id/btnSettings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnForYourPlants"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_margin="8dp"/>
+
+    <ImageButton
+        android:id="@+id/btnForYourPlants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/im22"
+        android:background="@drawable/button_circle"
+        app:layout_constraintTop_toBottomOf="@id/btnSensors"
+        app:layout_constraintStart_toEndOf="@id/btnForYou"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_margin="8dp"/>
+
+    <!-- Bottom STORE / EXIT buttons -->
+    <Button
+        android:id="@+id/btnStore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="STORE"
+        android:textStyle="bold"
+        android:background="@drawable/button_green"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnExit"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="EXIT"
+        android:textStyle="bold"
+        android:background="@drawable/button_red"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnStore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_margin="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
